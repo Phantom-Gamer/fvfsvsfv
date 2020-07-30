@@ -22,6 +22,12 @@ We will have to coordinate the flow of data from the input, and then amongst the
 
 ![pipeline](/images/pipeline.png)
 
+## Directory Structure
+
+![structure](/images/structure.png)
+
+
+
 ## Prerequisites and Setup
 
 You will need these following to run this project:
@@ -82,10 +88,6 @@ This will download all the required Models for this Project.
 
 
 ## *STEP 3*:
-
-Directory Structure:
-
-![structure](/images/structure.png)
 
 Now just copy this folder where you want to inside your Computer.
 Open Command Prompt there and run the following commands:
@@ -151,3 +153,22 @@ python <project_file.py directory> -fd <Face detection model name directory> -fl
 python <project_file.py directory> -fd <Face detection model name directory> -fl <Facial landmark detection model name directory> -hp <head pose estimation model name directory> -ge <Gaze estimation model name directory> -i <input video directory> -d MYRIAD
 ```
 
+## Benchmarks
+
+|Model|	Type|Load Time in seconds|
+|---|---|---|
+|Face Detection Model| FP32 | 570 ms|
+|Head Pose Detection Model | FP32 |375 ms|
+|Facial landmarks Detection Model | FP32 | 270 ms|
+|Gaze Detection Model | FP32 |  340 ms|
+
+
+ - Total loading time: 1600 milliseconds
+ - Total Inference time :  90 seconds
+ - FPS : 0.7 frames/sec
+ 
+ ## Edge Cases
+ 
+- If there are more than one face detected in the frame then model takes the first detected face for controlling the mouse pointer
+
+- This project can be utilized to identify and alert Students if they miss attention from Online Classes or identify and alert Sleeping drivers
