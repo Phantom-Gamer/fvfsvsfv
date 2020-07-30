@@ -29,7 +29,9 @@ You will need these following to run this project:
  - Openvino 2019.R3
  - Python 3
  
-*STEP 1:* 
+ 
+## *STEP 1:* 
+
 Register and download Intel Openvino from [here](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit/choose-download.html) which will be compatible for your Platform. 
  
  After installation of Openvino run this command:
@@ -58,7 +60,94 @@ Register and download Intel Openvino from [here](https://software.intel.com/cont
  
  This indicates that everything is OK on your System and Openvino is working properly!
  
-*STEP 2:*
+ 
+## *STEP 2:*
+
 Now your intel Openvino is ready you will need to download Models required for this Project.
 
-Navigate to 
+Navigate to:
+```
+cd C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\deployment_tools\tools\model_downloader
+```
+
+and run the following commands:
+```
+python3 downloader.py --name gaze-estimation-adas-0002 
+python3 downloader.py --name face-detection-adas-binary-0001  
+python3 downloader.py --name head-pose-estimation-adas-0001  
+python3 downloader.py --name landmarks-regression-retail-0009
+```
+
+This will download all the required Models for this Project.
+
+
+## *STEP 3*:
+
+Directory Structure:
+
+![structure](/images/structure.png)
+
+Now just copy this folder where you want to inside your Computer.
+Open Command Prompt there and run the following commands:
+
+```
+"C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\bin\setupvars.bat"
+
+pip install -r requirements.txt 
+```
+
+Now this will initialize the OpenVino Enviroment for our Project and download the requiremnets mentioned in the file requirements.txt
+
+
+## *Step 4:*
+
+Goto src/ folder.
+
+Now you can run this Project on CPU / GPU / FPGA / VPU / NCS 2 Stick
+
+Hit:
+
+```
+python main.py -h
+```
+
+This will output the required arguments for main.py
+
+Arguments:
+
+-  -h  : Informantion about available commands
+-  -fd : Path to Face Detection Model's xml file  **Required
+-  -fl : Path of Facial landmarks Detection Model xml file  **Required
+-  -hp : Path of Head Pose Estimation model's xml file  **Required
+-  -ge : Path of Gaze Estimation model's xml file  **Required
+-  -i  : If youn want to use Camera for input specify the Camera or if you want to use Video file specify path to file  **Required
+-  -d  : Device to use CPU, GPU, FPGA,  **Optional
+-  -pt : If you want to specify threshold  **Optional
+-  -flag : Specify the flags from fd, fl, hp, ge to visualize the output of corresponding model  **Optional
+
+
+## *STEP 5:*
+
+To run this Project you can use the following commands according to the device:
+
+
+- CPU
+```
+python <project_file.py directory> -fd <Face detection model name directory> -fl <Facial landmark detection model name directory> -hp <head pose estimation model name directory> -ge <Gaze estimation model name directory> -i <input video directory> -d CPU
+```
+
+- GPU
+```
+python <project_file.py directory> -fd <Face detection model name directory> -fl <Facial landmark detection model name directory> -hp <head pose estimation model name directory> -ge <Gaze estimation model name directory> -i <input video directory> -d GPU
+```
+
+- FPGA
+```
+python <project_file.py directory> -fd <Face detection model name directory> -fl <Facial landmark detection model name directory> -hp <head pose estimation model name directory> -ge <Gaze estimation model name directory> -i <input video directory> -d HETERO:FPGA,CPU
+```
+
+- NCS 2 Stick
+```
+python <project_file.py directory> -fd <Face detection model name directory> -fl <Facial landmark detection model name directory> -hp <head pose estimation model name directory> -ge <Gaze estimation model name directory> -i <input video directory> -d MYRIAD
+```
+
