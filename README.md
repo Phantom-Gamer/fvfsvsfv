@@ -168,7 +168,7 @@ Platform - Windows 10
 
  - Total loading time: 1555 milliseconds
  - Total Inference time :  90 seconds
- - FPS : 0.7 frames/sec
+ - FPS : 4.2 frames/sec
  
  
  
@@ -180,8 +180,15 @@ Platform - Windows 10
 |Gaze Detection Model | FP16 |  380 ms|
 
  - Total loading time: 1526 milliseconds
- - Total Inference time :  90 seconds
- - FPS : 0.7 frames/sec
+ - Total Inference time :  89 seconds
+ - FPS : 3.5 frames/sec
+ 
+ 
+ ## Results
+ 
+ - From above observations we can say that *FP16* has lowest model loading time and *FP32* has highest model loading time
+ - For Inference Time and FPS *FP16*, *FP32* give slightly better results
+ 
  
  ## Edge Cases
  
