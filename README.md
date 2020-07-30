@@ -119,9 +119,9 @@ Arguments:
 -  -h  : Informantion about available commands
 -  -fd : Path to Face Detection Model's xml file  **Required
 -  -fl : Path of Facial landmarks Detection Model xml file  **Required
--  -hp : Path of Head Pose Estimation model's xml file  **Required
--  -ge : Path of Gaze Estimation model's xml file  **Required
--  -i  : If youn want to use Camera for input specify the Camera or if you want to use Video file specify path to file  **Required
+-  -hp : Path of Head Pose Detection model's xml file  **Required
+-  -ge : Path of Gaze Detection model's xml file  **Required
+-  -i  : If you want to use Camera for input specify the Camera or if you want to use Video file specify path to file  **Required
 -  -d  : Device to use CPU, GPU, FPGA,  **Optional
 -  -pt : If you want to specify threshold  **Optional
 -  -flag : Specify the flags from fd, fl, hp, ge to visualize the output of corresponding model  **Optional
