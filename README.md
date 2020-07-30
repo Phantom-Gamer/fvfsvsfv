@@ -20,7 +20,7 @@ You will be using the InferenceEngine API from Intel's OpenVino ToolKit to build
 ## The Pipeline
 We will have to coordinate the flow of data from the input, and then amongst the different models and finally to the mouse controller. The flow of data will look like this:
 
-![pipeline](/images/pipleline)
+![pipeline](/images/pipeline.png)
 
 ## Prerequisites and Setup
 
