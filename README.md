@@ -20,7 +20,7 @@ You will be using the InferenceEngine API from Intel's OpenVino ToolKit to build
 ## The Pipeline
 We will have to coordinate the flow of data from the input, and then amongst the different models and finally to the mouse controller. The flow of data will look like this:
 
-![pipleline](pipeline.png)
+![pipeline](/images/pipleline)
 
 ## Prerequisites and Setup
 
@@ -39,10 +39,10 @@ Register and download Intel Openvino from [here](https://software.intel.com/cont
  "C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\bin\setupvars.bat"
  
  O/P:
-Python 3.8.0
-ECHO is off.
-PYTHONPATH=C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\deployment_tools\open_model_zoo\tools\accuracy_checker;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3.8;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\deployment_tools\open_model_zoo\tools\accuracy_checker;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3.8;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3;
-[setupvars.bat] OpenVINO environment initialized
+ Python 3.8.0
+ ECHO is off.
+ PYTHONPATH=C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\deployment_tools\open_model_zoo\tools\accuracy_checker;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.\python\python3.8;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\deployment_tools\open_model_zoo\tool\accuracy_checker;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3.8;C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\python\python3;
+ [setupvars.bat] OpenVINO environment initialized
  ```
  This will initialize the Opevino Enviroment.
  
@@ -54,7 +54,9 @@ PYTHONPATH=C:\Program Files (x86)\IntelSWTools\openvino_2019.3.334\deployment_to
  
  This will download a Model for you and show some output like this on your screen. (It takes some time for doing this)
  
+ ![first_run](/images/output_openvino_first_run.png)
  
+ This indicates that everything is OK on your System and Openvino is working properly!
  
 *STEP 2:*
 Now your intel Openvino is ready you will need to download Models required for this Project.
