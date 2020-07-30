@@ -27,7 +27,6 @@ We will have to coordinate the flow of data from the input, and then amongst the
 ![structure](/images/structure.png)
 
 
-
 ## Prerequisites and Setup
 
 You will need these following to run this project:
