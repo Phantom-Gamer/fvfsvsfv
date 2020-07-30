@@ -154,6 +154,11 @@ python <project_file.py directory> -fd <Face detection model name directory> -fl
 
 ## Benchmarks
 
+Tested on Intel i7 core processor. 
+Platform - Windows 10
+
+
+
 |Model|	Type|Load Time in seconds|
 |---|---|---|
 |Face Detection Model| FP32 | 570 ms|
@@ -161,8 +166,20 @@ python <project_file.py directory> -fd <Face detection model name directory> -fl
 |Facial landmarks Detection Model | FP32 | 270 ms|
 |Gaze Detection Model | FP32 |  340 ms|
 
+ - Total loading time: 1555 milliseconds
+ - Total Inference time :  90 seconds
+ - FPS : 0.7 frames/sec
+ 
+ 
+ 
+ |Model|	Type|Load Time in seconds|
+|---|---|---|
+|Face Detection Model| FP32 | 556 ms|
+|Head Pose Detection Model | FP16 |320 ms|
+|Facial landmarks Detection Model | FP16 | 270 ms|
+|Gaze Detection Model | FP16 |  380 ms|
 
- - Total loading time: 1600 milliseconds
+ - Total loading time: 1526 milliseconds
  - Total Inference time :  90 seconds
  - FPS : 0.7 frames/sec
  
